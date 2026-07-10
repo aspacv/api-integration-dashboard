@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #0f172a; color: white; padding: 2rem; }
+        .card { background: #1e293b; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .stat { font-size: 2rem; font-weight: bold; color: #64ffda; }
+    </style>
+</head>
+<body>
+    <h1>API Integration Dashboard</h1>
+    <div class="grid">
+        <div class="card">
+            <h2>Salesforce</h2>
+            <p>Leads: <span class="stat">{{ data.salesforce.leads }}</span></p>
+            <p>Opportunities: {{ data.salesforce.opportunities }}</p>
+            <p>Revenue: ${{ data.salesforce.revenue }}</p>
+        </div>
+        <div class="card">
+            <h2>Stripe</h2>
+            <p>Customers: <span class="stat">{{ data.stripe.customers }}</span></p>
+            <p>Revenue: ${{ data.stripe.revenue }}</p>
+            <p>Subscriptions: {{ data.stripe.subscriptions }}</p>
+        </div>
+        <div class="card">
+            <h2>Google Analytics</h2>
+            <p>Sessions: <span class="stat">{{ data.google_analytics.sessions }}</span></p>
+            <p>Conversions: {{ data.google_analytics.conversions }}</p>
+            <p>Bounce Rate: {{ data.google_analytics.bounce_rate }}%</p>
+        </div>
+    </div>
+</body>
+</html>
