@@ -1,0 +1,8 @@
+{
+    "api_keys": {
+        "salesforce": "your_key",
+        "stripe": "your_key",
+        "google_analytics": "your_key"
+    },
+    "refresh_interval": 3600
+}
